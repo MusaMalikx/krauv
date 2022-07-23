@@ -1,8 +1,10 @@
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="">
       <div className="bg-white rounded shadow-[0px_1px_5px_2px_rgba(0,0,0,0.2)]">
@@ -43,7 +45,10 @@ const Login = () => {
             <p>Forgot Password?</p>
           </div>
           <div>
-            <button className="bg-main p-2 w-full rounded dark:text-black">
+            <button
+              className="btn bg-main py-2 px-10 dark:hover:text-white rounded-lg w-full"
+              onClick={() => navigate("/dashboard")}
+            >
               Log in
             </button>
           </div>
@@ -51,12 +56,12 @@ const Login = () => {
       </div>
       <div className="text-center space-y-2 mt-2">
         <p className="dark:text-white">Didn't have an account yet?</p>
-        <Link
-          to={"/dashboard/register/step/2"}
+        <p
+          onClick={() => navigate("/dashboard/register/step/2")}
           className="hover:underline hover:underline-offset-1 text-red-500 cursor-pointer"
         >
           Login with new account
-        </Link>
+        </p>
       </div>
     </div>
   );
