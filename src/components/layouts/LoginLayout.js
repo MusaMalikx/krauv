@@ -12,8 +12,8 @@ const LoginLayout = ({ children, theme, setTheme }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex h-screen m-0 p-0">
-      <div className="w-80 dark:bg-[#18181A] px-10 py-4 md:flex flex-col items-center justify-between hidden">
+    <div className="flex max-h-screen m-0 p-0" style={{ overflow: "hidden" }}>
+      <div className="w-72 dark:bg-[#18181A] px-10 py-4 md:flex flex-col items-center justify-between hidden h-screen">
         <div className="cursor-pointer relative" onClick={() => navigate("/")}>
           <img src={logo} alt="logo" className="h-16" />
           {theme && (
@@ -23,7 +23,7 @@ const LoginLayout = ({ children, theme, setTheme }) => {
           )}
         </div>
 
-        <div className="space-y-8 dark:text-white">
+        <div className="space-y-8 dark:text-white text-sm">
           <h1 className="font-bold h4">Access Krauv Proxies Dashboard</h1>
           <div className="flex space-x-2">
             <AiOutlineDatabase size={25} />
@@ -41,13 +41,13 @@ const LoginLayout = ({ children, theme, setTheme }) => {
         <Link to="/">
           <div className="h-24 pt-4 border-t-[1px] border-t-[#AAAAAA] w-full flex items-center justify-center hover:underline underline-offset-1 dark:text-white cursor-pointer">
             <img src={login1} alt="icon" className="h-28 w-28 mt-2.5" />
-            <p className="relative -left-4 font-bold dark:text-white">
+            <p className="relative -left-4 font-bold text-sm dark:text-white">
               Exit Dashboard
             </p>
           </div>
         </Link>
       </div>
-      <div className="flex-grow flex flex-col px-10 py-4 bg-[#E5E5E5] dark:bg-black relative">
+      <div className="flex-grow flex flex-col px-10 py-4 bg-[#E5E5E5] dark:bg-black relative h-screen">
         <div className="flex-1 flex flex-col items-center justify-around relative">
           {/* <button
             className="btn dark:text-white rounded-full p-2 absolute top-0 left-0 md:hidden z-10"

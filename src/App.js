@@ -30,7 +30,10 @@ const App = () => {
               element={<Home setTheme={setTheme} theme={darkTheme} />}
             />
             <Route path="dashboard">
-              <Route index element={<Dashboard />} />
+              <Route
+                index
+                element={<Dashboard setTheme={setTheme} theme={darkTheme} />}
+              />
               <Route
                 path="login"
                 element={<Login setTheme={setTheme} theme={darkTheme} />}
@@ -43,7 +46,7 @@ const App = () => {
                 path="register/step/3"
                 element={<Register2 setTheme={setTheme} theme={darkTheme} />}
               />
-               <Route
+              <Route
                 path="register/finish"
                 element={<Finish setTheme={setTheme} theme={darkTheme} />}
               />
