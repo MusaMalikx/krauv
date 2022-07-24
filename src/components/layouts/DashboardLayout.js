@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo/logo.png";
 import { HiViewGrid } from "react-icons/hi";
@@ -9,23 +8,12 @@ import { AiOutlineUser } from "react-icons/ai";
 import { MdExitToApp } from "react-icons/md";
 import { FaSun, FaMoon } from "react-icons/fa";
 import Bullet from "../bullet/Bullet";
+import { useSelector } from "react-redux";
+import { selectValue } from "../../redux/features/dashboard/dashboardReducer";
 
 const DashboardLayout = ({ theme, setTheme, title, children }) => {
-  const [InState, InSetState] = useState({
-    in1: false,
-    in2: false,
-    in3: false,
-    in4: false,
-    in5: false,
-    in6: false,
-  });
-
-  const [MyState, MySetState] = useState({
-    my1: false,
-    my2: false,
-    my3: false,
-    my4: false,
-  });
+  const value = useSelector(selectValue);
+  // console.log(value);
 
   const navigate = useNavigate();
 
@@ -57,58 +45,46 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
             </div>
             <div className="font-normal space-y-2 my-4 border-l-[1px] dark:border-l-white border-l-black pl-4 ml-9">
               <Bullet
+                name="in1"
                 title="Residential Proxies"
-                bool={InState.in1}
-                onClick={() => {
-                  InSetState({ in1: true });
-                  MySetState({ my1: false });
-                }}
+                bool={value.in1}
                 theme={theme}
+                path="/dashboard/residential-proxies"
               />
               <Bullet
+                name="in2"
                 title="Shared Datacenter Proxies"
-                bool={InState.in2}
-                onClick={() => {
-                  InSetState({ in2: true });
-                  MySetState({ my1: false });
-                }}
+                bool={value.in2}
                 theme={theme}
+                path="/dashboard/shared-datacenter-proxies"
               />
               <Bullet
+                name="in3"
                 title="Dedicated Datacenter Proxies"
-                bool={InState.in3}
-                onClick={() => {
-                  InSetState({ in3: true });
-                  MySetState({ my1: false });
-                }}
+                bool={value.in3}
                 theme={theme}
+                path="/dashboard/dedicated-datacenter-proxies"
               />
               <Bullet
+                name="in4"
                 title="SERP Scraper API"
-                bool={InState.in4}
-                onClick={() => {
-                  InSetState({ in4: true });
-                  MySetState({ my1: false });
-                }}
+                bool={value.in4}
                 theme={theme}
+                path="/dashboard/serp-scraper-api"
               />
               <Bullet
+                name="in5"
                 title="Web Scraper API"
-                bool={InState.in5}
-                onClick={() => {
-                  InSetState({ in5: true });
-                  MySetState({ my1: false });
-                }}
+                bool={value.in5}
                 theme={theme}
+                path="/dashboard/web-scraper-api"
               />
               <Bullet
+                name="in6"
                 title="E-commerce API"
-                bool={InState.in6}
-                onClick={() => {
-                  InSetState({ in6: true });
-                  MySetState({ my1: false });
-                }}
+                bool={value.in6}
                 theme={theme}
+                path="/dashboard/ecommerce-api"
               />
             </div>
           </div>
@@ -119,40 +95,32 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
             </div>
             <div className="font-normal space-y-2 my-4 border-l-[1px] dark:border-l-white border-l-black pl-4 ml-9">
               <Bullet
+                name="my1"
                 title="Product"
-                bool={MyState.my1}
-                onClick={() => {
-                  MySetState({ my1: true });
-                  InSetState({ in1: false });
-                }}
+                bool={value.my1}
                 theme={theme}
+                path="/dashboard/product"
               />
               <Bullet
+                name="my2"
                 title="Profile"
-                bool={MyState.my2}
-                onClick={() => {
-                  MySetState({ my2: true });
-                  InSetState({ in1: false });
-                }}
+                bool={value.my2}
                 theme={theme}
+                path="/dashboard/residential-proxies"
               />
               <Bullet
+                name="my3"
                 title="Invoice"
-                bool={MyState.my3}
-                onClick={() => {
-                  MySetState({ my3: true });
-                  InSetState({ in1: false });
-                }}
+                bool={value.my3}
                 theme={theme}
+                path="/dashboard/residential-proxies"
               />
               <Bullet
+                name="my4"
                 title="Setting"
-                bool={MyState.my4}
-                onClick={() => {
-                  MySetState({ my4: true });
-                  InSetState({ in1: false });
-                }}
+                bool={value.my4}
                 theme={theme}
+                path="/dashboard/residential-proxies"
               />
             </div>
             <div className="flex space-x-1 items-center font-bold text-lg border-t-[1px] dark:border-t-white border-t-black pt-3">
@@ -172,7 +140,10 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
             <p className="text-gray-500">mm******@gmail.com</p>
           </div>
           <div className="flex space-x-3 items-center">
-            <div className="p-2.5 shadow rounded-[500px] w-fit h-fit">
+            <div
+              className="p-2.5 shadow rounded-[500px] w-fit h-fit cursor-pointer"
+              onClick={() => navigate("/dashboard/login")}
+            >
               <MdExitToApp size={30} />
             </div>
             <div

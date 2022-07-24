@@ -15,7 +15,7 @@ const Footer = ({ theme }) => {
             <div className="relative">
               <img src={logo} alt="logo" className="h-16" />
               {theme && (
-                <p className="font-bold text-2xl absolute top-4 left-[67px]">
+                <p className="font-bold text-2xl dark:text-white absolute top-4 left-[67px]">
                   Krauv Proxies
                 </p>
               )}

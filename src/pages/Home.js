@@ -37,6 +37,7 @@ import service8 from "../assets/services/8.svg";
 import Footer from "../components/footer/Footer";
 
 const Home = ({ setTheme, theme }) => {
+  
   return (
     <div className="">
       <Navbar setTheme={setTheme} theme={theme} />
