@@ -1,21 +1,22 @@
 import React, { useEffect } from "react";
 import MyAccountLayout from "../../../components/layouts/MyAccountLayout";
-import Producto from "../../../components/dashboard/myaccount/product/Product";
+import Settingo from "../../../components/dashboard/myaccount/setting/Setting";
 import { setValue } from "../../../redux/features/dashboard/dashboardReducer";
 import { useDispatch } from "react-redux";
 
-const Product = ({ theme, setTheme }) => {
-  const dispatch = useDispatch();
+const Setting = ({ theme, setTheme }) => {
 
-  useEffect(() => {
-    dispatch(setValue({ name: "my1", bool: true }));
-  }, [dispatch]);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+      dispatch(setValue({ name: "my4", bool: true }));
+    }, [dispatch]);
 
   return (
     <MyAccountLayout setTheme={setTheme} theme={theme}>
-      <Producto theme={theme} />
+      <Settingo theme={theme} />
     </MyAccountLayout>
   );
 };
 
-export default Product;
+export default Setting;

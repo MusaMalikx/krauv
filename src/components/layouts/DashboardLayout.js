@@ -106,21 +106,21 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
                 title="Profile"
                 bool={value.my2}
                 theme={theme}
-                path="/dashboard/residential-proxies"
+                path="/dashboard/profile"
               />
               <Bullet
                 name="my3"
                 title="Invoice"
                 bool={value.my3}
                 theme={theme}
-                path="/dashboard/residential-proxies"
+                path="/dashboard/invoice"
               />
               <Bullet
                 name="my4"
                 title="Setting"
                 bool={value.my4}
                 theme={theme}
-                path="/dashboard/residential-proxies"
+                path="/dashboard/setting"
               />
             </div>
             <div className="flex space-x-1 items-center font-bold text-lg border-t-[1px] dark:border-t-white border-t-black pt-3">
@@ -137,7 +137,7 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
             <div className="p-2.5 shadow rounded-[500px] w-fit h-fit">
               <AiOutlineUser size={30} />
             </div>
-            <p className="text-gray-500">mm******@gmail.com</p>
+            <p className="text-gray-500 dark:text-gray-300">mm******@gmail.com</p>
           </div>
           <div className="flex space-x-3 items-center">
             <div

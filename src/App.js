@@ -13,6 +13,9 @@ import Finish from "./pages/register/Finish";
 import Register1 from "./pages/register/Step2";
 import Register2 from "./pages/register/Step3";
 import Product from "./pages/dashboard/account/Product";
+import Profile from "./pages/dashboard/account/Profile";
+import Invoice from "./pages/dashboard/account/Invoice";
+import Setting from "./pages/dashboard/account/Setting";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap";
 
@@ -100,6 +103,18 @@ const App = () => {
               <Route
                 path="product"
                 element={<Product setTheme={setTheme} theme={darkTheme} />}
+              />
+              <Route
+                path="profile"
+                element={<Profile setTheme={setTheme} theme={darkTheme} />}
+              />
+              <Route
+                path="invoice"
+                element={<Invoice setTheme={setTheme} theme={darkTheme} />}
+              />
+              <Route
+                path="setting"
+                element={<Setting setTheme={setTheme} theme={darkTheme} />}
               />
             </Route>
           </Route>
