@@ -1,6 +1,6 @@
 import React from "react";
-import LoginLayout from "../../components/layouts/LoginLayout";
-import Finish from "../../components/dashboard/register/Finish";
+import LoginLayout from "../../../components/layouts/LoginLayout";
+import Finish from "../../../components/dashboard/recovery/Check";
 
 const Confirm = ({ theme, setTheme }) => {
   return (

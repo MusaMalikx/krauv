@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import Index from "../../components/dashboard/Index";
 import DashboardLayout from "../../components/layouts/DashboardLayout";
 import { setValue } from "../../redux/features/dashboard/dashboardReducer";
 
 const Dashboard = ({ theme, setTheme }) => {
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,7 +21,9 @@ const Dashboard = ({ theme, setTheme }) => {
       title={"Choose a Product"}
       theme={theme}
       setTheme={setTheme}
-    ></DashboardLayout>
+    >
+      <Index theme={theme} />
+    </DashboardLayout>
   );
 };
 

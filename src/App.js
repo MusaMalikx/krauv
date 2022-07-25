@@ -8,19 +8,21 @@ import SerpScraperApi from "./pages/dashboard/inactive/SerpScraperApi";
 import SharedDatacenterProxies from "./pages/dashboard/inactive/SharedDatacenterProxies";
 import WebScraperApi from "./pages/dashboard/inactive/WebScraperApi";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Finish from "./pages/register/Finish";
-import Register1 from "./pages/register/Step2";
-import Register2 from "./pages/register/Step3";
+import Login from "./pages/dashboard/Login";
+import Finish from "./pages/dashboard/register/Finish";
+import Register1 from "./pages/dashboard/register/Step2";
+import Register2 from "./pages/dashboard/register/Step3";
 import Product from "./pages/dashboard/account/Product";
 import Profile from "./pages/dashboard/account/Profile";
 import Invoice from "./pages/dashboard/account/Invoice";
 import Setting from "./pages/dashboard/account/Setting";
+import Recovery from "./pages/dashboard/recovery/Recovery";
+import Check from "./pages/dashboard/recovery/Check";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap";
 
 const App = () => {
-  const [darkTheme, setTheme] = useState(false);
+  const [darkTheme, setTheme] = useState(true);
 
   useEffect(() => {
     if (darkTheme === true) {
@@ -59,6 +61,14 @@ const App = () => {
               <Route
                 path="register/finish"
                 element={<Finish setTheme={setTheme} theme={darkTheme} />}
+              />
+                 <Route
+                path="recovery"
+                element={<Recovery setTheme={setTheme} theme={darkTheme} />}
+              />
+                 <Route
+                path="recovery/check"
+                element={<Check setTheme={setTheme} theme={darkTheme} />}
               />
               <Route
                 path="residential-proxies"

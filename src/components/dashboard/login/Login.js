@@ -41,7 +41,10 @@ const Login = () => {
               className="outline-none border-[1px] border-gray-300 p-2 rounded"
             />
           </div>
-          <div className="hover:underline hover:underline-offset-1 text-gray-400 hover:text-red-400 text-sm flex justify-end cursor-pointer">
+          <div
+            className="hover:underline hover:underline-offset-1 text-gray-400 hover:text-red-400 text-sm flex justify-end cursor-pointer"
+            onClick={() => navigate("/dashboard/recovery")}
+          >
             <p>Forgot Password?</p>
           </div>
           <div>

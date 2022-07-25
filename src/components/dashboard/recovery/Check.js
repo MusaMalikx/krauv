@@ -2,7 +2,7 @@ import React from "react";
 import { GoMail } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 
-const Finish = () => {
+const Check = () => {
   const navigate = useNavigate();
 
   return (
@@ -15,7 +15,7 @@ const Finish = () => {
           <p className="dark:text-gray-300">Success!</p>
           <h1 className="font-bold h4 dark:text-white">Check Your Email</h1>
           <p className="text-sm">
-            you have Successfully created an account. we have sent you an e-mail
+            We have send a password recovey link to your e-mail
           </p>
           <button
             className="btn bg-main py-2 px-10 rounded-lg w-full"
@@ -29,4 +29,4 @@ const Finish = () => {
   );
 };
 
-export default Finish;
+export default Check;

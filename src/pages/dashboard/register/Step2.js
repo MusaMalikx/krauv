@@ -1,6 +1,6 @@
 import React from "react";
-import LoginLayout from "../../components/layouts/LoginLayout";
-import Registero from "../../components/dashboard/register/Step2";
+import LoginLayout from "../../../components/layouts/LoginLayout";
+import Registero from "../../../components/dashboard/register/Step2";
 
 const Register = ({ theme, setTheme }) => {
   return (

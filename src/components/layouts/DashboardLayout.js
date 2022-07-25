@@ -36,7 +36,8 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
         <div className="space-y-3">
           <div
             className={`flex space-x-1 items-center font-bold text-lg ${
-              value.over && "border-main border-[1px] p-2 rounded"
+              value.over &&
+              "dark:border-main border-black border-[1px] p-2 rounded"
             } cursor-pointer`}
             onClick={() => navigate("/dashboard/")}
           >
@@ -46,7 +47,8 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
           <div>
             <div
               className={`flex space-x-1 items-center font-bold text-lg ${
-                value.in && "border-main border-[1px] p-2 rounded"
+                value.in &&
+                "dark:border-main border-black border-[1px] p-2 rounded"
               } cursor-pointer`}
               onClick={() => navigate("/dashboard/residential-proxies")}
             >
@@ -101,7 +103,8 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
           <div>
             <div
               className={`flex space-x-1 items-center font-bold text-lg ${
-                value.my && "border-main border-[1px] p-2 rounded"
+                value.my &&
+                "dark:border-main border-black border-[1px] p-2 rounded"
               } cursor-pointer`}
               onClick={() => navigate("/dashboard/product")}
             >
@@ -156,7 +159,7 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
               mm******@gmail.com
             </p>
           </div>
-          <div className="flex space-x-3 items-center w-72 sm:w-80 md:w-96">
+          <div className="flex space-x-3 items-center">
             <div
               className="p-2.5 shadow rounded-[500px] w-fit h-fit cursor-pointer"
               onClick={() => navigate("/dashboard/login")}

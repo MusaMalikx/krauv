@@ -1,6 +1,6 @@
 import React from "react";
-import LoginLayout from "../components/layouts/LoginLayout";
-import Logino from "../components/dashboard/login/Login";
+import LoginLayout from "../../components/layouts/LoginLayout";
+import Logino from "../../components/dashboard/login/Login";
 
 const Login = ({theme, setTheme}) => {
   return (
