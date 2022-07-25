@@ -1,4 +1,3 @@
-import React from "react";
 import { selectValue } from "../../redux/features/dashboard/dashboardReducer";
 import DashboardLayout from "./DashboardLayout";
 import { useSelector } from "react-redux";
@@ -7,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const MyAccountLayout = ({ theme, setTheme, children }) => {
   const value = useSelector(selectValue);
   const navigate = useNavigate();
+
   return (
     <DashboardLayout theme={theme} setTheme={setTheme} title="My Account">
       <div

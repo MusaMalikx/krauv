@@ -8,7 +8,7 @@ const SharedDatacenterProxies = ({ theme, setTheme }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setValue({ name: "in2", bool: true }));
+    dispatch(setValue({ name: "in2", bool: true, main: "in", mbool: true  }));
   }, [dispatch]);
 
   return (

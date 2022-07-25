@@ -8,7 +8,7 @@ const ResidentialProxies = ({ theme, setTheme }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setValue({ name: "in1", bool: true }));
+    dispatch(setValue({ name: "in1", bool: true, main: "in", mbool: true }));
   }, [dispatch]);
 
   return (

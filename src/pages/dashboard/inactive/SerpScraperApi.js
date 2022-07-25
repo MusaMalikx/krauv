@@ -8,7 +8,7 @@ const SerpScraperApi = ({ theme, setTheme }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setValue({ name: "in4", bool: true }));
+    dispatch(setValue({ name: "in4", bool: true, main: "in", mbool: true  }));
   }, [dispatch]);
   return (
     <DashboardLayout title="SERP Scraper API" theme={theme} setTheme={setTheme}>

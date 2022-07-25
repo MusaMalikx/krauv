@@ -23,7 +23,7 @@ const InactiveItem = ({ title }) => {
             </strong>
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-col-3 gap-3 mx-auto">
           <div className="flex gap-3">
             <img src={in1} alt="icon" className="h-16 w-16" />
             <div className="">

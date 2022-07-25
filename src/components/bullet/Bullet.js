@@ -1,18 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setValue } from "../../redux/features/dashboard/dashboardReducer";
 
-const Bullet = ({ title, bool, theme, path, name }) => {
+const Bullet = ({ title, bool, theme, path }) => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(
-      setValue({
-        name: name,
-        bool: true,
-      })
-    );
     navigate(path);
   };
 

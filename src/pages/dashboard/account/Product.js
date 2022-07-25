@@ -8,7 +8,7 @@ const Product = ({ theme, setTheme }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setValue({ name: "my1", bool: true }));
+    dispatch(setValue({ name: "my1", bool: true, main: "my", mbool: true }));
   }, [dispatch]);
 
   return (

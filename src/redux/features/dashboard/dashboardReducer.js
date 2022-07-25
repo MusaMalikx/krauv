@@ -12,8 +12,8 @@ export const dashboardReducer = createSlice({
       state.value += action.payload;
     },
     setValue: (state, action) => {
-      var { name, bool } = action.payload;
-      state.value = { [name]: bool };
+      var { name, bool, main, mbool } = action.payload;
+      state.value = { [name]: bool, [main]: mbool };
     },
   },
 });

@@ -8,7 +8,7 @@ const WebScraperApi = ({ theme, setTheme }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setValue({ name: "in5", bool: true }));
+    dispatch(setValue({ name: "in5", bool: true, main: "in", mbool: true  }));
   }, [dispatch]);
 
   return (

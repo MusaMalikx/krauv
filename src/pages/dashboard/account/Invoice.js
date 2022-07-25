@@ -5,12 +5,11 @@ import { setValue } from "../../../redux/features/dashboard/dashboardReducer";
 import { useDispatch } from "react-redux";
 
 const Invoice = ({ theme, setTheme }) => {
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-      dispatch(setValue({ name: "my3", bool: true }));
-    }, [dispatch]);
+  useEffect(() => {
+    dispatch(setValue({ name: "my3", bool: true, main: "my", mbool: true }));
+  }, [dispatch]);
 
   return (
     <MyAccountLayout setTheme={setTheme} theme={theme}>

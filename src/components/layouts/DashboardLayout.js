@@ -24,7 +24,7 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
       } max-h-screen`}
       style={{ overflow: "hidden" }}
     >
-      <div className="w-72 hidden md:flex flex-col justify-around items-center h-screen">
+      <div className="w-72 hidden lg:flex flex-col justify-around items-center h-screen">
         <div className="cursor-pointer relative" onClick={() => navigate("/")}>
           <img src={logo} alt="logo" className="h-16" />
           {theme && (
@@ -34,12 +34,22 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
           )}
         </div>
         <div className="space-y-3">
-          <div className="flex space-x-1 items-center font-bold text-lg">
+          <div
+            className={`flex space-x-1 items-center font-bold text-lg ${
+              value.over && "border-main border-[1px] p-2 rounded"
+            } cursor-pointer`}
+            onClick={() => navigate("/dashboard/")}
+          >
             <HiViewGrid size={30} />
             <p>Overview</p>
           </div>
           <div>
-            <div className="flex space-x-1 items-center font-bold text-lg">
+            <div
+              className={`flex space-x-1 items-center font-bold text-lg ${
+                value.in && "border-main border-[1px] p-2 rounded"
+              } cursor-pointer`}
+              onClick={() => navigate("/dashboard/residential-proxies")}
+            >
               <GiSplitCross size={30} />
               <p>Inactive Products</p>
             </div>
@@ -89,7 +99,12 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
             </div>
           </div>
           <div>
-            <div className="flex space-x-1 items-center font-bold text-lg">
+            <div
+              className={`flex space-x-1 items-center font-bold text-lg ${
+                value.my && "border-main border-[1px] p-2 rounded"
+              } cursor-pointer`}
+              onClick={() => navigate("/dashboard/product")}
+            >
               <FiUser size={30} />
               <p>My account</p>
             </div>
@@ -133,13 +148,15 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
       </div>
       <div className="flex-1">
         <div className="flex flex-col justify-center items-center space-y-5 sm:space-y-0 sm:flex-row sm:justify-between mx-5 py-4 border-b border-b-gray-400">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 w-72 sm:w-80 md:w-96">
             <div className="p-2.5 shadow rounded-[500px] w-fit h-fit">
               <AiOutlineUser size={30} />
             </div>
-            <p className="text-gray-500 dark:text-gray-300">mm******@gmail.com</p>
+            <p className="text-gray-500 dark:text-gray-300">
+              mm******@gmail.com
+            </p>
           </div>
-          <div className="flex space-x-3 items-center">
+          <div className="flex space-x-3 items-center w-72 sm:w-80 md:w-96">
             <div
               className="p-2.5 shadow rounded-[500px] w-fit h-fit cursor-pointer"
               onClick={() => navigate("/dashboard/login")}
@@ -161,7 +178,7 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
         <div className="h4 py-3 mx-5 font-bold border-b border-b-gray-400 mb-0">
           <p>{title}</p>
         </div>
-        <div className={`${theme ? "dark:bg-black" : "bg-[#E5E5E5]"}`}>
+        <div className={`${theme ? "dark:bg-black" : "bg-[#E5E5E5]"} `}>
           {children}
         </div>
       </div>

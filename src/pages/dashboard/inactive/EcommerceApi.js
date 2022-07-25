@@ -8,7 +8,7 @@ const EcommerceApi = ({ theme, setTheme }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setValue({ name: "in6", bool: true }));
+    dispatch(setValue({ name: "in6", bool: true, main: "in", mbool: true  }));
   }, [dispatch]);
   return (
     <DashboardLayout title="Ecommerce API" theme={theme} setTheme={setTheme}>

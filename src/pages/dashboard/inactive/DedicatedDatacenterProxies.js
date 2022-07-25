@@ -8,7 +8,7 @@ const DedicatedDatacenterProxies = ({ theme, setTheme }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setValue({ name: "in3", bool: true }));
+    dispatch(setValue({ name: "in3", bool: true, main: "in", mbool: true  }));
   }, [dispatch]);
   return (
     <DashboardLayout
