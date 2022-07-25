@@ -5,7 +5,7 @@ const Profile = ({ theme }) => {
   return (
     <div className="bg-[#E5E5E5] dark:bg-black h-[calc(100vh-264.49px)] overflow-y-scroll ">
       <div className={`bg-[#fff] dark:bg-[#18181A] p-8 mx-4 my-5`}>
-        <div className="flex p-10">
+        <div className="flex flex-col-reverse md:flex-row p-10">
           <div className="flex-grow px-10 space-y-10">
             <div className="flex flex-col space-y-3">
               <label className="dark:text-white font-bold h5">Full name</label>
