@@ -49,7 +49,7 @@ const Footer = ({ theme }) => {
               <p className="text-sm">Residential Proxies</p>
               <p className="text-sm">Next-Gen Residential Proxies</p>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center mt-4">
               <input
                 type="text"
                 placeholder="Subscribe"

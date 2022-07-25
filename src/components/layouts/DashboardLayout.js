@@ -24,7 +24,7 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
       } max-h-screen`}
       style={{ overflow: "hidden" }}
     >
-      <div className="w-72 flex flex-col justify-around items-center h-screen">
+      <div className="w-72 hidden md:flex flex-col justify-around items-center h-screen">
         <div className="cursor-pointer relative" onClick={() => navigate("/")}>
           <img src={logo} alt="logo" className="h-16" />
           {theme && (
@@ -132,7 +132,7 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
         <div />
       </div>
       <div className="flex-1">
-        <div className="flex justify-between mx-5 py-4 border-b border-b-gray-400">
+        <div className="flex flex-col justify-center items-center space-y-5 sm:space-y-0 sm:flex-row sm:justify-between mx-5 py-4 border-b border-b-gray-400">
           <div className="flex items-center space-x-2">
             <div className="p-2.5 shadow rounded-[500px] w-fit h-fit">
               <AiOutlineUser size={30} />
@@ -161,7 +161,7 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
         <div className="h4 py-3 mx-5 font-bold border-b border-b-gray-400 mb-0">
           <p>{title}</p>
         </div>
-        <div className={`${theme ? "dark:bg-black" : "bg-[#E5E5E5]"} h-full`}>
+        <div className={`${theme ? "dark:bg-black" : "bg-[#E5E5E5]"}`}>
           {children}
         </div>
       </div>

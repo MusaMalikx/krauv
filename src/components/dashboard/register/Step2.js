@@ -12,19 +12,19 @@ const Step2 = () => {
           <p>
             Step 2/3: <span>Account Information</span>
           </p>
-          <div className="flex gap-3 mt-2">
+          <div className="flex flex-col md:flex-row gap-3 mt-2">
             <div className="text-gray-400 flex flex-col space-y-1">
               <label className="text-sm dark:text-white">Name</label>
               <input
                 type="text"
-                className="outline-none border-[1px] border-gray-300 p-2 rounded"
+                className="outline-none border-[1px] border-gray-300 p-2 rounded md:w-40"
               />
             </div>
             <div className="text-gray-400 flex flex-col space-y-1">
               <label className="text-sm dark:text-white">Surname</label>
               <input
                 type="text"
-                className="outline-none border-[1px] border-gray-300 p-2 rounded"
+                className="outline-none border-[1px] border-gray-300 p-2 rounded md:w-40"
               />
             </div>
           </div>

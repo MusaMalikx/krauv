@@ -18,7 +18,7 @@ const NavbarItem = ({ name, theme, children }) => {
         TransitionComponent={Zoom}
         title={children}
       >
-        <button className="flex items-center text-lg hover:underline hover:underline-offset-1">
+        <button className="flex items-center hover:underline hover:underline-offset-1 whitespace-nowrap text-base xl:text-lg ">
           {name} <MdOutlineArrowDropDown size={25} />
         </button>
       </Tooltip>

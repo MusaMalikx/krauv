@@ -62,7 +62,7 @@ const LoginLayout = ({ children, theme, setTheme }) => {
               <FaMoon size={30} color="purple" />
             )}
           </div>
-          <div className="">{children}</div>
+          <div className="w-72 sm:w-80 md:w-96">{children}</div>
           <div></div>
         </div>
         <div className="border-t-[1px] border-t-[#AAAAAA] w-full h-24 dark:text-white">

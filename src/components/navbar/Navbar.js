@@ -33,16 +33,15 @@ const Navbar = ({ setTheme, theme }) => {
       </div>
       <nav className="navbar navbar-expand-lg bg-main min-h-[71px] text-black sticky top-0 filter backdrop-filter backdrop-grayscale backdrop-blur-2xl">
         <div className="container">
-          <Link className="navbar-brand font-bold text-2xl" to={"/"}>
-            {/* Krauv Proxies */}
-            <img src={logo} alt="logo" className="h-16" />
+          <Link className="navbar-brand font-bold" to={"/"}>
+            <img src={logo} alt="logo" className="h-11 sm:h-16 sm:w-48" />
           </Link>
           <div className="flex gap-3">
             <div
               className="m-2 cursor-pointer lg:hidden"
               onClick={() => setTheme(!theme)}
             >
-              {theme ? <FaSun size={30} /> : <FaMoon size={30} />}
+              {theme ? <FaSun className="text-2xl" /> : <FaMoon className="text-2xl" />}
             </div>
             <button
               className="navbar-toggler"
@@ -56,7 +55,7 @@ const Navbar = ({ setTheme, theme }) => {
             </button>
           </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <div className="navbar-nav me-auto lg:flex items-center lg:ml-10 space-y-7 lg:space-y-0 lg:space-x-8 hidden">
+            <div className="navbar-nav me-auto lg:flex items-center lg:ml-10 space-y-7 lg:space-y-0 gap-3 hidden">
               <NavbarItem name="Scraper APIs" theme={theme}>
                 <ScrapperApis theme={theme} />
               </NavbarItem>
@@ -70,17 +69,17 @@ const Navbar = ({ setTheme, theme }) => {
                 <Learn theme={theme} />
               </NavbarItem>
               <div>
-                <button className="text-lg">Enterprise</button>
+                <button className="text-base xl:text-lg">Enterprise</button>
               </div>
             </div>
-            <form className="d-flex gap-2 justify-end ml-auto">
+            <form className="d-flex gap-2 justify-end ml-auto lg:ml-5">
               <button
-                className="btn bg-black text-white py-1 px-5 md:py-3 md:px-10 rounded-lg w-full whitespace-nowrap hover:text-white"
+                className="btn bg-black text-white py-2 px-4 md:py-3  rounded-lg w-full whitespace-nowrap hover:text-white"
                 onClick={() => navigate("/dashboard/register/step/2")}
               >
                 Sign Up
               </button>
-              <button className="btn border-[1px] border-black  py-3 px-7 rounded-lg w-full whitespace-nowrap">
+              <button className="btn border-[1px] border-black py-2 px-4 md:py-3  rounded-lg w-full whitespace-nowrap">
                 Talk to sales
               </button>
             </form>

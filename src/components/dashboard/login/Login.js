@@ -20,7 +20,7 @@ const Login = () => {
               Continue With Google
             </button>
           </div>
-          <div className="d-flex align-items-center justify-content-center my-4">
+          <div className="d-flex align-items-center my-4">
             <div className="w-[180px] border-t border-solid border-gray-300" />
             <div className="mx-2 fw-bold text-sm text-gray-500">OR</div>
             <div className="w-[180px] border-t border-solid border-gray-300" />
