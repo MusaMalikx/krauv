@@ -1,12 +1,12 @@
 import React from "react";
 import { BsTriangleFill } from "react-icons/bs";
 
-const Learn = () => {
+const Learn = ({ theme }) => {
   return (
-    <div className="">
+    <div className="text-[#000] dark:text-[#fff]">
       <div className="relative -top-5 m-0">
         <div className="flex items-center justify-center">
-          <BsTriangleFill size={30} color="black" />
+          <BsTriangleFill size={30} color={theme ? "black" : "white"} />
         </div>
       </div>
       <div className="px-3 pb-3 flex whitespace-nowrap">

@@ -4,6 +4,9 @@ import Learn from "./nav-items/Learn";
 import NavbarItem from "./NavbarItem";
 import logo from "../../assets/logo/logo.png";
 import { FaSun, FaMoon } from "react-icons/fa";
+import Proxies from "./nav-items/Proxies";
+import ScrapperApis from "./nav-items/ScrapperApis";
+import Pricing from "./nav-items/Pricing";
 
 const Navbar = ({ setTheme, theme }) => {
   const navigate = useNavigate();
@@ -54,24 +57,27 @@ const Navbar = ({ setTheme, theme }) => {
           </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <div className="navbar-nav me-auto lg:flex items-center lg:ml-10 space-y-7 lg:space-y-0 lg:space-x-8 hidden">
-              <NavbarItem name="Proxies">
-                <button className="">heelo</button>
+              <NavbarItem name="Scraper APIs" theme={theme}>
+                <ScrapperApis theme={theme} />
               </NavbarItem>
-              <NavbarItem name="Scraper APIs">
-                <button className="">heelo</button>
+              <NavbarItem name="Proxies" theme={theme}>
+                <Proxies theme={theme} />
               </NavbarItem>
-              <NavbarItem name="Pricing">
-                <button className="">heelo</button>
+              <NavbarItem name="Pricing" theme={theme}>
+                <Pricing theme={theme} />
               </NavbarItem>
-              <NavbarItem name="Learn">
-                <Learn />
+              <NavbarItem name="Learn" theme={theme}>
+                <Learn theme={theme} />
               </NavbarItem>
               <div>
                 <button className="text-lg">Enterprise</button>
               </div>
             </div>
             <form className="d-flex gap-2 justify-end ml-auto">
-              <button className="btn bg-black text-white py-1 px-5 md:py-3 md:px-10 rounded-lg w-full whitespace-nowrap hover:text-white" onClick={() => navigate('/dashboard/register/step/2')}>
+              <button
+                className="btn bg-black text-white py-1 px-5 md:py-3 md:px-10 rounded-lg w-full whitespace-nowrap hover:text-white"
+                onClick={() => navigate("/dashboard/register/step/2")}
+              >
                 Sign Up
               </button>
               <button className="btn border-[1px] border-black  py-3 px-7 rounded-lg w-full whitespace-nowrap">

@@ -1,16 +1,15 @@
 import { Tooltip, Zoom } from "@mui/material";
 import React from "react";
-import { MdOutlineArrowDropDown} from "react-icons/md";
+import { MdOutlineArrowDropDown } from "react-icons/md";
 
-const NavbarItem = ({ name, children }) => {
+const NavbarItem = ({ name, theme, children }) => {
   return (
     <div className="relative">
-      
       <Tooltip
         componentsProps={{
           tooltip: {
             sx: {
-              backgroundColor: "black",
+              backgroundColor: theme ? "black" : "white",
               border: "1px solid #54FFBD",
               maxWidth: "1000px",
             },
