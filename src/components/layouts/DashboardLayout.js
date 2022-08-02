@@ -30,7 +30,7 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
         style={{ overflow: "hidden" }}
       >
         <div
-          className={`w-72 dark:bg-[#18181A] flex-col justify-around items-center h-screen px-10 ${
+          className={`w-72 dark:bg-[#18181A] bg-[#fff] flex-col justify-around items-center h-screen px-10 ${
             click ? "flex z-20" : "hidden"
           }`}
         >
@@ -162,7 +162,7 @@ const DashboardLayout = ({ theme, setTheme, title, children }) => {
         </div>
         <div className="flex-1">
           <div className="flex flex-col justify-center items-center space-y-5 sm:space-y-0 sm:flex-row sm:justify-between mx-5 py-4 border-b border-b-gray-400">
-            <div className="flex items-center space-x-2 w-72 sm:w-80 md:w-96">
+            <div className="flex ms-4 items-center space-x-2 w-72 sm:w-80 md:w-96">
               <div className="p-2.5 shadow rounded-[500px] w-fit h-fit">
                 <AiOutlineUser size={30} />
               </div>

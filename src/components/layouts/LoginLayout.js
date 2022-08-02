@@ -22,7 +22,7 @@ const LoginLayout = ({ children, theme, setTheme }) => {
         style={{ overflow: "hidden" }}
       >
         <div
-          className={`w-72 dark:bg-[#18181A] px-10 py-4 flex flex-col items-center justify-between h-screen absolute md:relative ${
+          className={`w-72 dark:bg-[#18181A] bg-[#fff] px-10 py-4 flex flex-col items-center justify-between h-screen absolute md:relative ${
             click && "z-20"
           }`}
         >
@@ -32,7 +32,7 @@ const LoginLayout = ({ children, theme, setTheme }) => {
           >
             {!click && <img src={logo} alt="logo" className="h-16" />}
             {theme && (
-              <p className="font-bold text-2xl absolute top-2 md:top-4 -left-10 md:left-[67px] whitespace-nowrap dark:text-white">
+              <p className="font-bold text-2xl absolute top-2 md:top-4 -left-10 md:left-[67px] whitespace-nowrap dark:text-[#fff]">
                 Krauv Proxies
               </p>
             )}
