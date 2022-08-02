@@ -47,7 +47,7 @@ const MyAccountLayout = ({ theme, setTheme, children }) => {
           Setting
         </p>
       </div>
-      <div>{children}</div>
+      <div className="min-h-[calc(100vh-215.66px)]">{children}</div>
     </DashboardLayout>
   );
 };

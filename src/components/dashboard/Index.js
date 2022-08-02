@@ -89,7 +89,7 @@ const Index = ({ theme }) => {
             <Graph theme={theme} />
           </div>
         </div>
-        <div>
+        <div className="pb-20">
           <div className="pl-6 py-4 bg-[#E5E5E5] dark:bg-black">
             <h5 className="h5">Resources</h5>
           </div>
